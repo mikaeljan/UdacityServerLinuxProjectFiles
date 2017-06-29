@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} Add new book
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+  <div class="col-md-10">
+    <h2>Create a new book:</h2>
+    <form method='post' action="{{url_for('new_item')}}">
+      <div class="form-group">
+        <label for="new_item_name">Enter your book's new title:<br>
+        <input name="new_item_name" id='new_item_name' value=""> </label>
+      </div>
+      <div class="form-group">
+        <label for="new_item_author">Enter book's author:<br>
+        <input name="new_item_author" id='new_item_author' value=""> </label>
+      </div>
+      <div class="form-group">
+        <label for="new_item_des">Enter book's description:<br>
+        <input name="new_item_des" id='new_item_des' value=""> </label>
+      </div>
+      <div class="form-group">
+        <label for="new_item_cat">Enter book's category:<br>
+        <select class="form-control" name="new_item_cat" id='new_item_cat'>
+          {% for cat in categories %}
+          <option value="{{cat.name}}">{{cat.name}}</option>
+          {% endfor %}
+        </select> </label>
+      </div>
+      <div class="form-group">
+        <label for="new_item_year">Enter book's year of publication:<br>
+        <input name="new_item_year" id='new_item_year' value=""> </label>
+      </div>
+      <div class="form-group">
+        <label for="new_item_price">Enter price:<br>
+        <input name="new_item_price" id='new_item_price' value=""> </label>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Create">
+        <a class="btn btn-primary" href="{{url_for('show_catalog')}}">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

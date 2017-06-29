@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} Delete Item
+{% endblock %}
+
+
+{% block content %}
+    <h2>Delete Item:</h2>
+    <form method='post' action="{{url_for('delete_item',book_title=book_title)}}">
+      <div class="form-group">
+        <h2>Are you sure you want to remove <em>{{item.book_title}}</em> from our catalog?</h2>
+        <input name ='delete' class='btn btn-danger' type="submit" value="Delete">
+        <a class='btn btn-primary' href="{{url_for('show_catalog')}}">Cancel</a>
+      </div>
+    </form>
+{% endblock %}

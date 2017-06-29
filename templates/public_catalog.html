@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} Home Page
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-2">
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+        Category
+      </a>
+      {% for cat in categories %}
+      <a href="{{url_for('show_items',category=cat, category_name=cat.name)}}" class="list-group-item">{{cat.name}}
+        <span class="badge">{% for i in item_sum %}{% if i[1] == cat.name%}{{i[0]}}{% endif %}{% endfor %}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="col-md-10">
+    <div class="list-group">
+      <a href="#" class="list-group-item active"><strong>Recent Books</strong></a>
+      {% for item in items %}
+      <a href="{{url_for('show_item', book_title=item.book_title, category_name=item.category_name)}}"
+      class="list-group-item">{{item.book_title}} ({{item.category_name}})</a>
+      {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock %}

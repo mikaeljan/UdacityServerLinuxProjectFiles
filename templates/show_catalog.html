@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} Home Page
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-2">
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+        Category
+      </a>
+      {% for cat in categories %}
+      <a href="{{url_for('show_items', category_name=cat.name)}}" class="list-group-item">{{cat.name}}
+        <span class="badge">{% for i in item_sum %}{% if i[1] == cat.name%}{{i[0]}}{% endif %}{% endfor %}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+<div class="col-md-10">
+  <div class="panel panel-info">
+    <div class="panel-heading"><strong>Recent Books</strong>
+      {% for item in items %}
+      <div class="panel panel-default">
+        <div class="panel-heading"><a href="{{url_for('show_item', book_title=item.book_title, category_name=item.category_name)}}">{{item.book_title}}</a>
+          (<a href="{{url_for('show_items', category_name=item.category_name)}}">{{item.category_name}}</a>)</div>
+        <div class="panel-body">
+          <a class="btn btn-primary btn-sm" href="{{url_for('edit_item', book_title=item.book_title)}}">Edit</a>
+          <a class="btn btn-danger btn-sm" href="{{url_for('delete_item', book_title=item.book_title)}}">Delete</a>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+      <div class="panel-footer">  <a class="btn btn-success" href="{{url_for('new_item')}}">Add a new item</a>
+      </div>
+  </div>
+</div>
+{% endblock %}
