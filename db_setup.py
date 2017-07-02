@@ -63,7 +63,8 @@ class Item(Base):
 
     category_id = Column(Integer, ForeignKey('category.id'))
     category_name = Column(String)
-    category = relationship(Category, foreign_keys=[category_id],backref='item')
+    category = relationship(Category, foreign_keys=[category_id], backref='item')
+
     # ForeignKeyConstraint(['creator_id', 'category_name'], ['user.id'], ['category.name'] )
     @property
     def serialize(self):
