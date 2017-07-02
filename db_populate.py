@@ -73,7 +73,7 @@ category7 = Category(name ="Detective Novel")
 session.add(category7)
 session.commit()
 
-item8 = Item(creator_id=1,author="Sir Arthur Conan Doyle",book_title="The Adventures of Sherlock Holmes",description="The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, featuring his fictional detective Sherlock Holmes. It was first published on 14 October 1892; the individual stories had been serialised in The Strand Magazine between June 1891 and July 1892. The stories are not in chronological order, and the only characters common to all twelve are Holmes and Dr. Watson. The stories are related in first-person narrative from Watson's point of view.",
+item8 = Item(creator_id=1,author="Sir Arthur Conan Doyle",book_title="The Adventures of Sherlock Holmes",description="The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, featuring his fictional detective Sherlock Holmes.",
                      price="$8.99",year_published=1892,category=category7)
 session.add(item8)
 session.commit()
@@ -82,7 +82,7 @@ category8 = Category(name ="Autobiography")
 session.add(category8)
 session.commit()
 
-item9= Item(creator_id=1,author="Nelson Mandela",book_title="Long Walk to Freedom",description="Long Walk to Freedom is an autobiographical work written by South African President Nelson Mandela, and first published in 1994 by Little Brown & Co. The book profiles his early life, coming of age, education and 27 years in prison. Under the apartheid government, Mandela was regarded as a terrorist and jailed on the infamous Robben Island for his role as a leader of the then-outlawed ANC. He later achieved international recognition for his leadership as president in rebuilding the country's once segregated society. The last chapters of the book describe his political ascension, and his belief that the struggle still continued against apartheid in South Africa.",
+item9= Item(creator_id=1,author="Nelson Mandela",book_title="Long Walk to Freedom",description="Long Walk to Freedom is an autobiographical work written by South African President Nelson Mandela, and first published in 1994 by Little Brown & Co.",
                      price="$11.99",year_published=1994,category=category8)
 
 session.add(item9)
@@ -92,7 +92,7 @@ category9 = Category(name ="Romance")
 session.add(category9)
 session.commit()
 
-item9 = Item(creator_id=1,author="Jane Austen",book_title="Pride and Prejudice",description="Pride and Prejudice is a novel by Jane Austen, first published in 1813. The story charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgements and comes to appreciate the difference between the superficial and the essential. The comedy of the writing lies in the depiction of manners, education, and marriage and money in the British Regency. Mr Bennet of the Longbourn estate has five daughters, but his property is entailed, meaning that none of the girls can inherit it. Since his wife had no fortune, it is imperative that one of the girls marries well in order to support the others on his death.",
+item9 = Item(creator_id=1,author="Jane Austen",book_title="Pride and Prejudice",description="Pride and Prejudice is a novel by Jane Austen, first published in 1813. The story charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgements and comes to appreciate the difference between the superficial and the essential.",
                      price="$0.99",year_published=1813,category=category9)
 session.add(item9)
 session.commit()
