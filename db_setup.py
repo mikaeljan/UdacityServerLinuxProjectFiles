@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, func
+from sqlalchemy import Column, ForeignKey, UniqueConstraint, Integer, String, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -32,7 +32,7 @@ class Category(Base):
     __tablename__ = 'category'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(80), nullable=False)
+    name = Column(String(80), unique=True, nullable=False)
 
     @property
     def serialize(self):
@@ -59,9 +59,11 @@ class Item(Base):
     updated_on = Column(DateTime(timezone=True), onupdate=func.now())
 
     creator_id = Column(Integer, ForeignKey("user.id"))
-    creator = relationship(User)
-    category_name = Column(Integer, ForeignKey('category.name'))
-    category = relationship(Category)
+    creator = relationship(User, foreign_keys=[creator_id])
+
+    category_id = Column(Integer, ForeignKey('category.id'))
+    category_name = Column(String)
+    category = relationship(Category, foreign_keys=[category_id],backref='item')
     # ForeignKeyConstraint(['creator_id', 'category_name'], ['user.id'], ['category.name'] )
     @property
     def serialize(self):
