@@ -62,7 +62,7 @@ class Item(Base):
     creator = relationship(User)
     category_name = Column(Integer, ForeignKey('category.name'))
     category = relationship(Category)
-
+    # ForeignKeyConstraint(['creator_id', 'category_name'], ['user.id'], ['category.name'] )
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
@@ -77,5 +77,6 @@ class Item(Base):
         }
 
 # ==================================================
+# engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 engine = create_engine('postgresql://catalog:catalog@localhost/itemscatalog')
 Base.metadata.create_all(engine)
