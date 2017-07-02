@@ -1,11 +1,11 @@
 # Linux Server Configuration - Udacity 7th Project
 Hosting [5th Udacity Project](https://github.com/mikaeljan/UdacityFifthProject)
 
-Public IP Address: 52.56.249.81
+Public IP Address: 52.56.249.81 <br>
 Hostname: http://ec2-52-56-249-81.eu-west-2.compute.amazonaws.com/
-SSH Port: 2200 ( as instructed )
+<br>SSH Port: 2200 ( as instructed )
 
-Dependencies installed:
+Software installed:
 - virtualenv
 - Apache2
 - PostgreSQL
@@ -20,10 +20,11 @@ Dependencies installed:
 - SQLalchemy
 
 Sources (other than Udacity):
-[Digital Ocean](https://www.digitalocean.com/)
-[Stack Overflow](https://stackoverflow.com/questions/37156248/flask-sqlalchemy-multiple-foreign-keys-in-relationship) and similarly related topics
-[PostgreSQL Docs](https://www.postgresql.org/)
-[Sqlalchemy Docs](http://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-many)
+<br>
+[Digital Ocean](https://www.digitalocean.com/)<br>
+[Stack Overflow](https://stackoverflow.com/questions/37156248/flask-sqlalchemy-multiple-foreign-keys-in-relationship) and similarly related topics<br>
+[PostgreSQL Docs](https://www.postgresql.org/)<br>
+[Sqlalchemy Docs](http://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-many)<br>
 [Hcidata](http://www.hcidata.info/host2ip.cgi) - for getting hostname etc.
 
 ## Contact
