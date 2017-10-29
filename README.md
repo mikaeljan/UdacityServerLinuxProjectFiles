@@ -2,7 +2,7 @@
 Hosting [5th Udacity Project](https://github.com/mikaeljan/UdacityFifthProject)
 
 <hr>
-## !! Server has been shut down !! 
+## Server has been shut down !! 
 <hr>
 
 Public IP Address: 52.56.249.81 <br>
