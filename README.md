@@ -2,8 +2,11 @@
 Hosting [5th Udacity Project](https://github.com/mikaeljan/UdacityFifthProject)
 
 <hr>
-## Server has been shut down !! 
+
+## Server has been shut down !
+Please refer to the [5th Udacity Project](https://github.com/mikaeljan/UdacityFifthProject) for details how to run Bookstore App locally.
 <hr>
+
 
 Public IP Address: 52.56.249.81 <br>
 Hostname: http://ec2-52-56-249-81.eu-west-2.compute.amazonaws.com/
