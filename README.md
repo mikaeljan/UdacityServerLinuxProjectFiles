@@ -1,6 +1,10 @@
 # Linux Server Configuration - Udacity 7th Project
 Hosting [5th Udacity Project](https://github.com/mikaeljan/UdacityFifthProject)
 
+<hr>
+## !! Server has been shut down !! 
+<hr>
+
 Public IP Address: 52.56.249.81 <br>
 Hostname: http://ec2-52-56-249-81.eu-west-2.compute.amazonaws.com/
 <br>SSH Port: 2200 ( as instructed )
